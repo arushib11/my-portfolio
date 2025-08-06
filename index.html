@@ -1,42 +1,10 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <style>
-    header h1 {
-      flex: 1;
-      text-align: center;
-      margin: 0;
-    }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      background: #fff;
-      color: #222;
-    }
-    header {
-      background: #1a587e; /* Professional deep blue */
-      color: #fff;
-      padding: 24px 0;
-      box-shadow: 0 2px 8px rgba(26,35,126,0.05);
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 28px;
-    }
-    nav a {
-      color: #ecf0f1;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    nav a:hover {
-      color: #3498db;
-    }
     .hero {
       background: #f8f9fa;
       padding: 60px 20px;
@@ -51,6 +19,88 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(44,62,80,0.04);
       border: 1px solid #e1e4e8;
+    }
+    .header-container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 16px;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2980b9 60%, #1abc9c 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2em;
+      color: #fff;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+      border: 3px solid #fff;
+    }
+    .header-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .header-title h1 {
+      margin: 0 0 2px 0;
+      font-size: 2.1em;
+      text-align: left;
+      letter-spacing: 1px;
+    }
+    .header-title span {
+      font-size: 1em;
+      color: #b2d7f3;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+    header {
+      background: linear-gradient(90deg, #1a587e 70%, #2980b9 100%);
+      color: #fff;
+      padding: 0;
+      box-shadow: 0 2px 8px rgba(26,35,126,0.07);
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
+    }
+    .header-contact {
+      min-width: 220px;
+      text-align: right;
+      font-size: 0.98em;
+      line-height: 1.6;
+      color: #ecf0f1;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+    .header-contact strong {
+      color: #fff;
+    }
+    .header-contact a {
+      color: #ecf0f1;
+      text-decoration: underline;
+    }
+    .header-contact a:hover {
+      color: #1abc9c;
     }
     h2, h3 {
       color: #2c3e50;
@@ -87,45 +137,44 @@
       .section {
         padding: 20px 8px;
       }
-      header > div {
+      .header-container {
         flex-direction: column;
         align-items: flex-start;
+        padding: 0 4px;
       }
-      nav ul {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 8px !important;
-        width: 100% !important;
+      .header-left {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
       }
-      nav ul li {
-        width: 100%;
-        margin-bottom: 4px;
-      }
-      h1 {
+      /* Navigation removed for mobile */
+      .header-title h1 {
         text-align: left !important;
+        font-size: 1.3em;
+      }
+      .avatar {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2em;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div style="max-width: 900px; margin: auto; display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-      <div style="flex: 2; min-width: 200px; display: flex; flex-direction: column; align-items: flex-start;">
-        <h1 style="width: 100%; text-align: left; margin-bottom: 8px;">Arushi Bhaskar</h1>
-        <nav style="width: 100%;">
-          <ul style="display: flex; flex-direction: row; justify-content: flex-start; align-items: center; gap: 28px; margin: 0; padding: 0; list-style: none; width: 100%;">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#resume">Resume</a></li>
-          </ul>
-        </nav>
+    <div class="header-container">
+      <div class="header-left">
+        <div class="avatar" title="Arushi Bhaskar">AB</div>
+        <div class="header-title">
+          <h1>Arushi Bhaskar</h1>
+          <span>Data Science & Analytics Professional</span>
+        </div>
       </div>
-      <div style="flex: 1; min-width: 220px; text-align: right; font-size: 0.98em; line-height: 1.6; color: #ecf0f1;">
-        <div><strong style="color: #fff;">Mobile:</strong> 484-502-9011</div>
-        <div><strong style="color: #fff;">Email:</strong> <a href="mailto:arushi.bhaskar@gmail.com" style="color: #ecf0f1; text-decoration: underline;">arushi.bhaskar@gmail.com</a></div>
-        <div><strong style="color: #fff;">Residence:</strong> Kennett Square, PA</div>
-        <div><strong style="color: #fff;">Visa Status:</strong> GC EAD</div>
+      <div class="header-contact">
+        <div><strong>Mobile:</strong> 484-502-9011</div>
+        <div><strong>Email:</strong> <a href="mailto:arushi.bhaskar@gmail.com">arushi.bhaskar@gmail.com</a></div>
+        <div><strong>Residence:</strong> Kennett Square, PA</div>
+        <div><strong>Visa Status:</strong> GC EAD</div>
       </div>
     </div>
   </header>
