@@ -1,34 +1,32 @@
-<!DOCTYPE html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <style>
-    .hero {
-      background: #f8f9fa;
-      padding: 60px 20px;
-      text-align: center;
-      border-bottom: 1px solid #e1e4e8;
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
     }
-    .section {
-      padding: 40px 20px;
+    .header-outer {
       max-width: 900px;
       margin: 0 auto 32px auto;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
       border: 1px solid #e1e4e8;
+      background: linear-gradient(90deg, #768fc4 0%, #1e3a8a 100%);
+      min-height: 120px;
     }
     .header-container {
-      max-width: 1000px;
-      margin: auto;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 0 16px;
+      padding: 32px 32px 24px 32px;
     }
     .header-left {
       display: flex;
@@ -66,37 +64,15 @@
       font-weight: 400;
       margin-top: 2px;
     }
-    header {
-      background: linear-gradient(90deg, #1a587e 70%, #2980b9 100%);
-      color: #fff;
-      padding: 0;
-      box-shadow: 0 2px 8px rgba(26,35,126,0.07);
-      border-bottom-left-radius: 18px;
-      border-bottom-right-radius: 18px;
-    }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      background: #fff;
-      color: #222;
-    }
     .header-contact {
-      min-width: 220px;
-      text-align: right;
-      font-size: 0.98em;
-      line-height: 1.6;
-      color: #ecf0f1;
-      margin-left: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 2px;
+      color: #f3f4f6;
     }
     .header-contact strong {
-      color: #fff;
+      color: #f3f4f6;
+      font-weight: bold;
     }
     .header-contact a {
-      color: #ecf0f1;
+      color: #fff;
       text-decoration: underline;
     }
     .header-contact a:hover {
@@ -133,6 +109,18 @@
     a:hover {
       color: #1abc9c;
     }
+
+    /* Restore section box styling */
+    .section {
+      max-width: 900px;
+      margin: 0 auto 32px auto;
+      background: #f8fafc;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+      border: 1px solid #e1e4e8;
+      padding: 32px 32px 24px 32px;
+    }
+
     @media (max-width: 600px) {
       .section {
         padding: 20px 8px;
@@ -162,19 +150,21 @@
 </head>
 <body>
   <header>
-    <div class="header-container">
-      <div class="header-left">
-        <div class="avatar" title="Arushi Bhaskar">AB</div>
-        <div class="header-title">
-          <h1>Arushi Bhaskar</h1>
-          <span>Data Science & Analytics Professional</span>
+    <div class="header-outer">
+      <div class="header-container">
+        <div class="header-left">
+          <div class="avatar" title="Arushi Bhaskar">AB</div>
+          <div class="header-title">
+            <h1>Arushi Bhaskar</h1>
+            <span>Data Science & Analytics Professional</span>
+          </div>
         </div>
-      </div>
-      <div class="header-contact">
-        <div><strong>Mobile:</strong> 484-502-9011</div>
-        <div><strong>Email:</strong> <a href="mailto:arushi.bhaskar@gmail.com">arushi.bhaskar@gmail.com</a></div>
-        <div><strong>Residence:</strong> Kennett Square, PA</div>
-        <div><strong>Visa Status:</strong> GC EAD</div>
+        <div class="header-contact">
+          <div><strong>Mobile:</strong> 484-502-9011</div>
+          <div><strong>Email:</strong> <a href="mailto:arushi.bhaskar@gmail.com">arushi.bhaskar@gmail.com</a></div>
+          <div><strong>Residence:</strong> Kennett Square, PA</div>
+          <div><strong>Visa Status:</strong> GC EAD</div>
+        </div>
       </div>
     </div>
   </header>
